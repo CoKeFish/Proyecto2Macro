@@ -25,11 +25,13 @@ public class DropDownPort : MonoBehaviour
         foreach (var portName in ports)
             try
             {
-                Debug.Log(portName); //read available port names      
+                //Debug.Log(portName); //read available port names      
                 Dropdown.options.Add(new TMP_Dropdown.OptionData(portName));
             }
             catch (SystemException)
             {
             }
+
+        Dropdown.value = 1;
     }
 }
